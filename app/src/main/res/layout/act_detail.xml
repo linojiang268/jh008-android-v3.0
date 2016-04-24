@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_nor_bg"
+    android:clipChildren="false">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.gather.android.widget.banner.SliderBanner
+                    android:id="@+id/sliderBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    app:slider_banner_indicator="@+id/dotView"
+                    app:slider_banner_pager="@+id/viewPager">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.gather.android.widget.banner.DotView
+                        android:id="@+id/dotView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="gone"
+                        app:dot_radius="4dp"
+                        app:dot_selected_color="0xffffffff"
+                        app:dot_span="8dp"
+                        app:dot_unselected_color="0x80ffffff" />
+                </com.gather.android.widget.banner.SliderBanner>
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/shape_circle_black_bg">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvIndexImageNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalImageNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/5"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:paddingLeft="16dp"
+                        android:text="活动名称"
+                        android:gravity="center_vertical|left"
+                        android:textColor="#cccccc"
+                        android:textSize="@dimen/text_l" />
+
+                    <TextView
+                        android:id="@+id/tvEnrollNum"
+                        android:layout_marginRight="@dimen/size_sixteen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="报名：0人"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_l"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_act_jioner"
+                        android:textColor="@color/red"/>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:layout_marginLeft="@dimen/size_sixteen"
+                    android:layout_marginRight="@dimen/size_sixteen"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/tvActName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:minHeight="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/size_sixteen"
+                    android:paddingRight="10dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="活动标题"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_l" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="16dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_act_detail_time" />
+
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:minHeight="48dp"
+                        android:gravity="center_vertical|left"
+                        android:text="时间："
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_l" />-->
+
+                    <TextView
+                        android:id="@+id/tvActTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:minHeight="48dp"
+                        android:gravity="center_vertical|left"
+                        android:text="活动时间"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_l" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/btnActAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/icon_act_detail_location" />
+
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:minHeight="48dp"
+                        android:gravity="center_vertical|left"
+                        android:text="地点："
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_l" />-->
+
+                    <TextView
+                        android:id="@+id/tvActAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:minHeight="48dp"
+                        android:lineSpacingExtra="5dp"
+                        android:drawableRight="@drawable/ic_home_org_next"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical|left"
+                        android:text="活动地址"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_l" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="16dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_weight="1.0"
+                    android:paddingLeft="16dp"
+                    android:text="活动手册"
+                    android:gravity="center_vertical|left"
+                    android:textColor="#cccccc"
+                    android:textSize="@dimen/text_l" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:layout_marginLeft="@dimen/size_sixteen"
+                    android:layout_marginRight="@dimen/size_sixteen"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/llActFlow"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivActFlow"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_act_flow" />
+
+                        <TextView
+                            android:id="@+id/tvActMember"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:singleLine="true"
+                            android:text="活动流程"
+                            android:textColor="#999999"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llActAlbum"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivActAlbum"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_act_album_normal" />
+
+                        <TextView
+                            android:id="@+id/tvActAlbum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:singleLine="true"
+                            android:text="照片墙(0)"
+                            android:textColor="#999999"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llActFile"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivActFile"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_act_file_normal" />
+
+                        <TextView
+                            android:id="@+id/tvActFile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:singleLine="true"
+                            android:text="文件(0)"
+                            android:textColor="#999999"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llActRoute"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivActRoute"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_act_route_normal" />
+
+                        <TextView
+                            android:id="@+id/tvActRoute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:singleLine="true"
+                            android:text="路线指引"
+                            android:textColor="#999999"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color" />
+
+
+            <LinearLayout
+                android:id="@+id/llActDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="@dimen/size_sixteen"
+                    android:text="活动详情"
+                    android:textColor="#CCCCCC"
+                    android:textSize="@dimen/text_l" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:layout_marginLeft="@dimen/size_sixteen"
+                    android:layout_marginRight="@dimen/size_sixteen"
+                    android:background="@color/line_color" />
+
+
+
+                <TextView
+                    android:id="@+id/tvActDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_sixteen"
+                    android:layout_marginRight="@dimen/size_sixteen"
+                    android:lineSpacingExtra="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp"
+                    android:text="活动详情内容"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_m" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/line_color" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llActOrg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="@dimen/size_sixteen"
+                    android:layout_marginTop="6dp"
+                    android:text="主办方"
+                    android:textColor="#CCCCCC"
+                    android:textSize="@dimen/text_m" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:layout_marginLeft="@dimen/size_sixteen"
+                    android:layout_marginRight="@dimen/size_sixteen"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:background="@drawable/white_bg_click_style"
+                    android:paddingLeft="@dimen/size_sixteen"
+                    android:paddingRight="@dimen/size_sixteen"
+                    android:paddingTop="8dp">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_circle_user_icon">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ivOrgIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="1.0px"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:fadeDuration="300"
+                            fresco:placeholderImage="@drawable/def_headportrait"
+                            fresco:roundAsCircle="true" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvOrgName"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1.0"
+                        android:singleLine="true"
+                        android:text="主办方"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_xl" />
+
+                    <ImageView
+                        android:id="@+id/ivPhone"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="15dp"
+                        android:src="@drawable/icon_phone_call" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/act_detail_title_bg">
+
+        <include
+            layout="@layout/scroll_title_bar" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/flBottomItem"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/llActEnroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size_sixteen"
+            android:paddingRight="@dimen/size_sixteen">
+
+            <LinearLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvActPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1999.00"
+                    android:textColor="@color/red"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnEnroll"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/red_corner_btn_click_style"
+                    android:text="立即报名"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tvEnrollStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="@color/line_color" />
+    </FrameLayout>
+</FrameLayout>

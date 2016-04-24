@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="style_color_primary">#333742</color>
+    <color name="style_color_primary_dark">#333742</color>
+    <color name="style_color_accent">#333742</color>
+
+    <!--<color name="toolbar_menu_click_bg">#c26f2d</color>
+    <color name="black_light">#ff333333</color>
+    <color name="dialog_text">#ff696969</color>
+    <color name="tab_host_text_normal">#FF666666</color>
+    <color name="tab_host_text_selected">#FFFFA000</color>
+    <color name="refresh_loadmore_text_color">#ff444444</color>
+    <color name="toolbar_text_color">#FFFFFFFF</color>
+
+
+    &lt;!&ndash; Loading&ndash;&gt;
+    <color name="triangle">#72d572</color>
+    <color name="circle">#738ffe</color>
+    <color name="rect">#e84e40</color>
+    <color name="view_bg">#00000000</color>
+    <color name="shadow">#bdbdbd</color>
+    <color name="loading_view_text_color">#ff696969</color>
+
+    &lt;!&ndash; Title&ndash;&gt;
+    <color name="title_color">#FFFFFFFF</color>
+    <color name="line_color">#FFd2d2d2</color>
+    <color name="theme_press_color">#FFEB813B</color>
+    <color name="theme_press_color_material">#602c10</color>
+    <color name="edit_title_color">#FF757575</color>
+    <color name="edit_content_color">#FF333333</color>
+    <color name="image_select">#FF21282C</color>-->
+
+
+
+
+
+    <color name="red_dark">#e6581f</color>
+    <color name="blue_dark">#018bbe</color>
+    <color name="yellow_dark">#dbad02</color>
+    <color name="green_dark">#32975c</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#fd7037</color>
+    <color name="blue">#00a9e8</color>
+    <color name="yellow">#fdce1e</color>
+    <color name="orange">#fd7037</color>
+    <color name="green">#52be7f</color>
+    <color name="white">#ffffff</color><!--大背景颜色，列表项颜色。操作栏文字及按钮文字颜色-->
+    <color name="gray">#eef2f4</color><!--大背景颜色，列表项按下颜色-->
+    <color name="gray_light">#c5d2d8</color><!--分隔线颜色，输入框边框颜色-->
+    <color name="gray_dark">#999999</color><!--二级标题颜色，提示类文字颜色-->
+    <color name="black">#333333</color><!--一级标题，tab文字，段落文字，重要文字颜色-->
+    <color name="black_light">#666666</color>
+
+    <color name="route_color">#03a9f4</color>
+
+    <color name="titlebar_bg_color">#333742</color>
+    <color name="line_color">#c5d2d8</color><!--分隔线颜色-->
+
+    <color name="image_click_color">#25000000</color><!-- 图片点击按压效果-->
+
+
+    <color name="textcolor_tips">#cccccc</color>
+
+
+
+</resources>

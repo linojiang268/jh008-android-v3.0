@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_select_type_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSignTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:text="活动标题活动标"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvSignTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="星期一，下午16:70"
+            android:textColor="#FF999999"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="@color/line_color" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="397dp">
+
+            <LinearLayout
+                android:id="@+id/llSign"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/shape_circle_sign_white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvSignNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0.0dp"
+                            android:layout_weight="8"
+                            android:gravity="bottom"
+                            android:text="5"
+                            android:textColor="@color/green"
+                            android:textSize="75sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0.0dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="签到点"
+                            android:textColor="@color/green"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <com.gather.android.widget.SlideView xmlns:slider="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/slider"
+                    android:layout_width="220dp"
+                    android:layout_height="57dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/shape_corner_green"
+                    slider:effectiveLength="161dp"
+                    slider:effectiveVelocity="1300dp"
+                    slider:maskText="请交工作人员验证"
+                    slider:maskTextMarginLeft="64dp"
+                    slider:maskTextMarginTop="35dp"
+                    slider:maskTextSize="15sp"
+                    slider:slidableLength="162dp"
+                    slider:slider="@drawable/icon_sign_silder_arrow"
+                    slider:sliderMarginLeft="2dp"
+                    slider:sliderMarginTop="1.7dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llTips"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_marginTop="60dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/icon_red_fail"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签到失败"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="60dp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/line_color"/>
+
+                <TextView
+                    android:id="@+id/tvTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="您的签到顺序不正确\n请联系现场工作人员"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="15sp"
+                    android:textColor="#ADADAD"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

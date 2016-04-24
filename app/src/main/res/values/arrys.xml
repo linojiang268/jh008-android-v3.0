@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="intrest">
+        <item>运动户外</item>
+        <item>文化艺术</item>
+        <item>摄影旅行</item>
+        <item>音乐舞蹈</item>
+        <item>时尚生活</item>
+        <item>读书写作</item>
+        <item>美食</item>
+        <item>汽车</item>
+        <item>创业</item>
+        <item>公益</item>
+        <item>亲子</item>
+        <item>其他</item>
+    </array>
+
+    <array name="sexuality">
+        <item>男</item>
+        <item>女</item>
+    </array>
+
+    <array name="weeks">
+        <item>星期天</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </array>
+
+    <array name="act_score">
+        <item>交通</item>
+        <item>签到</item>
+        <item>活动秩序</item>
+        <item>活动体验</item>
+        <item>用餐</item>
+        <item>其他</item>
+    </array>
+</resources>

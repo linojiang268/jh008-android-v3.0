@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_nor_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_base" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:text="@string/select_yout_intrestings"
+        android:textColor="#999999"
+        android:gravity="center"
+        android:background="#EEF2F4"
+        android:textSize="@dimen/text_m" />
+
+    <GridView
+        android:id="@+id/gv_intrest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:fadingEdge="none"
+        android:horizontalSpacing="8dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:numColumns="2"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:verticalSpacing="8dp" />
+</LinearLayout>

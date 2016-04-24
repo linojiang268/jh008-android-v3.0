@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/app_nor_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:orientation="horizontal"
+        android:background="@color/style_color_primary">
+
+        <ImageButton
+            android:id="@+id/ibtn_backpress"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="@dimen/titlebar_height"
+            android:background="@drawable/titlebar_btn_click_style"
+            android:focusable="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_backpress"/>
+
+        <LinearLayout
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:paddingLeft="8dp"
+            android:layout_width="0.0dp"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_org_search_edittext_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_edittext_search"/>
+
+            <EditText
+                android:id="@+id/etContent"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/text_m"
+                android:singleLine="true"
+                android:hint="社团名"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/ivClear"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="8dp"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/icon_edittext_clear"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="搜索"
+            android:background="@drawable/titlebar_btn_click_style"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_l"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1.0">
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ptrLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cube_ptr:ptr_duration_to_close="200"
+            cube_ptr:ptr_duration_to_close_header="1000"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="1.7">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarStyle="outsideOverlay" />
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <ImageView
+            android:id="@+id/maskFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@drawable/app_nor_bg"/>
+
+    </FrameLayout>
+
+</LinearLayout>

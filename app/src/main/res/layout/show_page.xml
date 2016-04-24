@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/show_page_bg" />
+
+
+    <include layout="@layout/item_backpress" />
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/showpage_btn_style"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="从兴趣开始吧"
+        android:textColor="@color/showpage_btn_textcolor"
+        android:textSize="@dimen/text_xl" />
+</RelativeLayout>

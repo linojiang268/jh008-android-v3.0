@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="transparent">@android:color/transparent</drawable>
+
+    <!--app默认背景-->
+    <drawable name="app_nor_bg">#eef2f4</drawable>
+
+    <drawable name="list_nor">#ffffff</drawable>
+    <drawable name="list_pre">#eef2f4</drawable>
+    <drawable name="photo_image_bg">#dedede</drawable>
+</resources>

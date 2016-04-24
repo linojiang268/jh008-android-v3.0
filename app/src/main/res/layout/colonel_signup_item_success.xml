@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnCall"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:background="@drawable/colonel_call_btn_style"/>
+
+        <LinearLayout
+            android:id="@+id/itemFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_btn_click_style"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_btn_click_style"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="120dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="昵称"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_l"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tvCallNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:padding="5dp"
+                        android:text="15228838270"
+                        android:gravity="center_vertical|left"
+                        android:textSize="@dimen/text_s"
+                        android:textColor="@color/gray_dark"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvRemarks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="160dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="备注"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_s"
+                        android:textColor="@color/gray_dark"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/colonel_icon_remarks"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:layout_marginRight="16dp"
+                android:text="500元"
+                android:gravity="center_vertical|left"
+                android:textSize="@dimen/text_xl"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line_color" />
+
+</LinearLayout>

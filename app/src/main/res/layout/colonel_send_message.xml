@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_nor_bg"
+    android:gravity="center_horizontal"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_base" />
+
+    <TextView
+        android:id="@+id/tvLeftMessage"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="18sp"
+        android:text="剩余次数"
+        android:gravity="center"
+        android:textColor="@color/gray_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tvMsgRecivers"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:text="收件人：报名成功者"
+            android:gravity="center|left"
+            android:paddingLeft="16dp"
+            android:textColor="@color/gray_dark"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="@color/line_color"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <EditText
+            android:id="@+id/etContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="5"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:lineSpacingExtra="3dp"
+            android:gravity="left|top"
+            android:hint="编辑短信"
+            android:textColorHint="@color/gray_light"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:background="@color/transparent"/>
+
+        <TextView
+            android:id="@+id/tvWordsCount"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:text="0 / 60"
+            android:gravity="center|right"
+            android:paddingRight="16dp"
+            android:textColor="@color/gray_dark"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

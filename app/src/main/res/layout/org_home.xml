@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/app_nor_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/style_color_primary">
+
+        <ImageButton
+            android:id="@+id/ibtn_backpress"
+            android:layout_width="@dimen/titlebar_button_size"
+            android:layout_height="@dimen/titlebar_button_size"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/titlebar_btn_click_style"
+            android:focusable="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_backpress" />
+
+        <TextView
+            android:id="@+id/tvOrgWaitting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:visibility="invisible"
+            android:text="等待团长审核"
+            android:textColor="@color/red_dark"
+            android:textSize="@dimen/text_m" />
+
+        <TextView
+            android:id="@+id/tvOrgApply"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/titlebar_button_size"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/titlebar_btn_click_style"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="申请加入"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_m" />
+
+        <ImageView
+            android:id="@+id/ivOrgExit"
+            android:visibility="invisible"
+            android:layout_width="@dimen/titlebar_button_size"
+            android:layout_height="@dimen/titlebar_button_size"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/titlebar_btn_click_style"
+            android:padding="14dp"
+            android:src="@drawable/icon_org_exit" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/style_color_primary">
+
+        <FrameLayout
+            android:id="@+id/layout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivOrgIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:fadeDuration="300"
+                fresco:pressedStateOverlayImage="@drawable/shape_circle_image_click_style"
+                fresco:placeholderImage="@drawable/def_headportrait"
+                fresco:roundAsCircle="true" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/ivOrgVertify"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/icon_org_vertify" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvOrgName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xl" />
+
+        <TextView
+            android:id="@+id/tvOrgMemberNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOrgName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_m" />
+
+        <TextView
+            android:id="@+id/tvOrgIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOrgMemberNum"
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="2dp"
+            android:padding="12dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_m" />
+    </RelativeLayout>
+
+    <com.gather.android.widget.ElasticScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1.0"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llLineOne"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlOrgAct"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/white_bg_click_style">
+
+                    <ImageView
+                        android:id="@+id/act"
+                        android:layout_width="@dimen/org_home_icon_size"
+                        android:layout_height="@dimen/org_home_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/org_home_icon_margin_top"
+                        android:src="@drawable/icon_org_act" />
+
+                    <ImageView
+                        android:id="@+id/ivOrgActTip"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/act"
+                        android:src="@drawable/icon_red_tip" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"
+                        android:text="近期活动"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/line_size"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rlOrgHistory"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/white_bg_click_style">
+
+                    <ImageView
+                        android:id="@+id/news"
+                        android:layout_width="@dimen/org_home_icon_size"
+                        android:layout_height="@dimen/org_home_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/org_home_icon_margin_top"
+                        android:src="@drawable/icon_org_history" />
+
+                    <ImageView
+                        android:id="@+id/ivOrgNewTip"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/news"
+                        android:src="@drawable/icon_red_tip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"
+                        android:text="社团资讯"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/line_size"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rlOrgMember"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/white_bg_click_style">
+
+                    <ImageView
+                        android:id="@+id/member"
+                        android:layout_width="@dimen/org_home_icon_size"
+                        android:layout_height="@dimen/org_home_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/org_home_icon_margin_top"
+                        android:src="@drawable/icon_org_member" />
+
+                    <ImageView
+                        android:id="@+id/ivOrgMemberTip"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/member"
+                        android:src="@drawable/icon_red_tip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"
+                        android:text="社团成员"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:id="@+id/llLineTwo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlOrgPhoto"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/white_bg_click_style">
+
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:layout_width="@dimen/org_home_icon_size"
+                        android:layout_height="@dimen/org_home_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/org_home_icon_margin_top"
+                        android:src="@drawable/icon_org_photo" />
+
+                    <ImageView
+                        android:id="@+id/ivOrgPhotoTip"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/photo"
+                        android:src="@drawable/icon_red_tip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"
+                        android:text="相册"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/line_size"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rlOrgQRCode"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/white_bg_click_style">
+
+                    <ImageView
+                        android:layout_width="@dimen/org_home_icon_size"
+                        android:layout_height="@dimen/org_home_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/org_home_icon_margin_top"
+                        android:src="@drawable/icon_org_qrcode" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"
+                        android:text="社团分享"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/line_size"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_color" />
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rlOrgNotify"-->
+                    <!--android:layout_width="0.0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1.0"-->
+                    <!--android:background="@drawable/white_bg_click_style">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/org_home_icon_size"-->
+                        <!--android:layout_height="@dimen/org_home_icon_size"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_marginTop="@dimen/org_home_icon_margin_top"-->
+                        <!--android:src="@drawable/icon_org_notify" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"-->
+                        <!--android:text="通知"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="@dimen/text_l" />-->
+                <!--</RelativeLayout>-->
+
+                <RelativeLayout
+                    android:id="@+id/rlOrgSetting"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/white_bg_click_style">
+
+                    <ImageView
+                        android:layout_width="@dimen/org_home_icon_size"
+                        android:layout_height="@dimen/org_home_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/org_home_icon_margin_top"
+                        android:src="@drawable/icon_org_seting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"
+                        android:text="隐私设置"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llLineThree"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:visibility="invisible"
+                    android:id="@+id/rlOrgMore"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/white">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:lineSpacingExtra="2dp"
+                        android:text="更多功能\n敬请期待"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+                <View
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/line_size"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_color" />
+
+                <RelativeLayout
+                    android:visibility="invisible"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/white_bg_click_style">
+
+                    <ImageView
+                        android:layout_width="@dimen/org_home_icon_size"
+                        android:layout_height="@dimen/org_home_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/org_home_icon_margin_top"
+                        android:src="@drawable/icon_org_seting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"
+                        android:text="隐私设置"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+                <View
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/line_size"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_color" />
+
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="@dimen/org_home_icon_size"
+                        android:layout_height="@dimen/org_home_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/icon_org_member" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/org_home_icon_text_margin_bottom"
+                        android:text="社团成员"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_l" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.gather.android.widget.ElasticScrollView>
+
+
+</LinearLayout>

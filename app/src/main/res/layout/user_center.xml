@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_nor_bg"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/red">
+
+        <include layout="@layout/item_backpress" />
+
+        <FrameLayout
+            android:id="@+id/layout"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_centerInParent="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivUserIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:fadeDuration="300"
+                fresco:placeholderImage="@drawable/def_headportrait"
+                fresco:pressedStateOverlayImage="@drawable/shape_circle_image_click_style"
+                fresco:roundAsCircle="true" />
+
+            <ImageView
+                android:id="@+id/ivUserSex"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_user_sex_female" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xl" />
+
+        <TextView
+            android:id="@+id/tvUserAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvUserName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_m" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1.0"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="false"
+        android:horizontalSpacing="8dp"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:padding="8dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        android:verticalSpacing="8dp" />
+
+    <LinearLayout
+        android:id="@+id/llChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#C5D2D8" />
+
+        <Button
+            android:id="@+id/btChat"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/green_corner_btn_click_style"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="发私信"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_l" />
+    </LinearLayout>
+
+</LinearLayout>

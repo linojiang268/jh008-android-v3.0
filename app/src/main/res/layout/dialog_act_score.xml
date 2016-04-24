@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/act_score_dialog_bg_style">
+
+        <LinearLayout
+            android:id="@+id/llNormal"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvActTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="15dp"
+                android:lineSpacingExtra="3dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="5dp"
+                android:text="活动标题活动标"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llHasMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvActTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="星期一，下午16:70"
+                        android:textColor="#FF999999"
+                        android:textSize="13sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/ivActMap"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                fresco:actualImageScaleType="centerCrop"
+                                fresco:fadeDuration="300"
+                                fresco:placeholderImage="@drawable/default_image"
+                                fresco:placeholderImageScaleType="centerCrop" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvOrgName"
+                                    android:layout_width="0.0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="75dp"
+                                    android:layout_marginRight="7dp"
+                                    android:layout_weight="1.0"
+                                    android:singleLine="true"
+                                    android:text="社团名字"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                                <View
+                                    android:layout_width="@dimen/line_size"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/tvEnrollNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="参与人数：60"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ivOrgIcon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|left"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginLeft="7dp"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:fadeDuration="300"
+                            fresco:placeholderImage="@drawable/def_headportrait"
+                            fresco:roundAsCircle="true" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llNoMap"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/ivNoMapOrgIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:fadeDuration="300"
+                        fresco:placeholderImage="@drawable/def_headportrait"
+                        fresco:roundAsCircle="true" />
+
+                    <com.gather.android.widget.NoScrollGridView
+                        android:id="@+id/gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@null"
+                        android:drawSelectorOnTop="false"
+                        android:fadingEdge="none"
+                        android:headerDividersEnabled="false"
+                        android:horizontalSpacing="10dp"
+                        android:verticalSpacing="10dp"
+                        android:listSelector="#00000000"
+                        android:numColumns="2"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:scrollbarStyle="outsideOverlay"
+                        android:scrollingCache="true" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:text="请留下宝贵意见"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:textColor="#999999"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <com.gather.android.widget.RatingBarView
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
+                app:starCount="5"
+                android:layout_marginLeft="8dp"
+                app:starEmpty="@drawable/icon_rating_unselected"
+                app:starFill="@drawable/icon_rating_selected"
+                app:starImageSize="53dp" />
+
+
+            <TextView
+                android:id="@+id/tvCommit"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/act_scroe_commit_btn_style"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEdit"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvEditTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="10dp"
+                    android:text="提供反馈意见"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tvEditOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="完成"
+                    android:textSize="13sp"
+                    android:textColor="@color/green"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/act_score_dialog_edittext_bg_style"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:gravity="left|top"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="7dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="7dp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_base"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+
+            <ImageButton
+                android:id="@+id/btnNavigation"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/transparent"
+                android:layout_gravity="bottom|right"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_btn_navigation"/>
+
+            <ImageButton
+                android:id="@+id/btnMyLocation"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/transparent"
+                android:layout_gravity="bottom|right"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_btn_mylocation"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

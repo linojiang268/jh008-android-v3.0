@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_nor_bg"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/title_bar_base"/>
+
+        <ProgressBar
+            android:id="@+id/pbRefresh"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:indeterminateDrawable="@drawable/small_progress"
+            android:visibility="invisible"
+            android:layout_gravity="right|center" />
+
+    </FrameLayout>
+
+    <com.gather.android.widget.ElasticScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="16dp"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <FrameLayout
+                    android:layout_width="96dp"
+                    android:layout_height="96dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivHeadportrait"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        app:placeholderImage="@drawable/def_headportrait"
+                        app:pressedStateOverlayImage="@color/image_click_color"
+                        app:placeholderImageScaleType="centerCrop"
+                        app:actualImageScaleType="centerCrop"
+                        android:layout_alignParentLeft="true"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom|right"
+                        android:src="@drawable/ic_btn_choose_headicon"/>
+
+                    <View
+                        android:layout_width="@dimen/line_size"
+                        android:layout_height="96dp"
+                        android:layout_gravity="right"
+                        android:background="@color/line_color"/>
+
+                </FrameLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnPhonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_btn_click_style"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvPhonenumber"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_l"
+                            android:textColorHint="@color/gray_dark"
+                            android:gravity="center|left"
+                            android:singleLine="true"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="5dp"
+                            android:visibility="invisible"
+                            android:layout_marginRight="16dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/arrow_right"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_size"
+                        android:background="@color/line_color"/>
+
+                    <LinearLayout
+                        android:id="@+id/btnPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_btn_click_style"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvPassword"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_l"
+                            android:text="******"
+                            android:textColorHint="@color/gray_dark"
+                            android:gravity="center|left"
+                            android:singleLine="true"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/arrow_right"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="16dp"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:id="@+id/btnNickname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:orientation="horizontal"
+                android:background="@drawable/white_btn_click_style">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/text_l"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:text="@string/nick_name"/>
+
+                <TextView
+                    android:id="@+id/tvNickname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="sadasd"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_l"
+                    android:textColorHint="@color/gray_dark"
+                    android:gravity="center|right"
+                    android:singleLine="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/arrow_right"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/text_l"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:text="@string/sex"/>
+
+                <TextView
+                    android:id="@+id/tvSex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="36dp"
+                    android:text="asdasdsad"
+                    android:textSize="@dimen/text_l"
+                    android:textColor="@color/black"
+                    android:gravity="center|right"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:id="@+id/btnAge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/white_btn_click_style">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/text_l"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:text="@string/age"/>
+
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="asdasds"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_l"
+                    android:textColorHint="@color/gray_dark"
+                    android:gravity="center|right"
+                    android:singleLine="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/arrow_right"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/btnIntrest"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:background="@drawable/white_btn_click_style">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_l"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:gravity="center|left"
+                        android:text="@string/mark"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="5dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/arrow_right"/>
+
+                </LinearLayout>
+
+                <com.gather.android.widget.FlowLayout
+                    android:id="@+id/flIntrest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingRight="16dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/green_corner_btn_click_style"
+                android:textSize="@dimen/text_l"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:text="@string/exit"/>
+
+        </LinearLayout>
+
+    </com.gather.android.widget.ElasticScrollView>
+
+</LinearLayout>
+

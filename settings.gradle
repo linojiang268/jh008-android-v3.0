@@ -1,0 +1,1 @@
+include ':app', ':ptr-lib', ':mvchelper-lib', ':photodraweeview-lib', ':viewpagerindicator-lib', ':share-lib', ':multi-image-selector-lib', ':gatherdatabase', ':dialog-lib'

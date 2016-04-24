@@ -1,0 +1,9 @@
+<com.gather.android.widget.TitleBar
+    android:id="@+id/titlebar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/titlebar_bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titlebar_height"
+    android:elevation="@dimen/def_elevation"
+    app:theme="@style/Toolbar.AppCompat.Responsive"/>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_nor_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/style_color_primary"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibtn_backpress"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="@dimen/titlebar_height"
+            android:background="@drawable/titlebar_btn_click_style"
+            android:focusable="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_backpress"/>
+
+        <LinearLayout
+            android:layout_width="0.0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/shape_org_search_edittext_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_edittext_search" />
+
+            <EditText
+                android:id="@+id/et_keyword"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/keyword_of_act"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_m" />
+
+            <ImageButton
+                android:id="@+id/btn_clear"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/transparent"
+                android:padding="8dp"
+                android:src="@drawable/icon_edittext_clear" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/titlebar_btn_click_style"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_l" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_act"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

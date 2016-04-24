@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--文字等级-->
+    <dimen name="text_xxl">22sp</dimen>
+    <dimen name="text_xl">18sp</dimen>
+    <dimen name="text_l">16sp</dimen>
+    <dimen name="text_m">14sp</dimen>
+    <dimen name="text_s">12sp</dimen>
+    <!--按钮高度-->
+    <dimen name="button_height">48dp</dimen>
+    <!--输入框高度-->
+    <dimen name="edit_height">48dp</dimen>
+    <!--文字栏高度-->
+    <dimen name="text_height">48dp</dimen>
+    <!--titlebar高度-->
+    <dimen name="titlebar_height">48dp</dimen>
+    <!--titlebar按钮大小-->
+    <dimen name="titlebar_button_size">48dp</dimen>
+    <!--tab栏高度-->
+    <dimen name="tab_height">48dp</dimen>
+    <!--tab中的间距-->
+    <dimen name="tab_padding">2dp</dimen>
+    <!--tab中icon大小-->
+    <dimen name="tab_icon_size">21dp</dimen>
+    <!--tab中提示点大小-->
+    <dimen name="tab_dot_size">7dp</dimen>
+
+    <dimen name="def_elevation">0dp</dimen>
+
+    <dimen name="line_size">1px</dimen>
+    
+    <dimen name="size_sixteen">16dp</dimen>
+
+    <dimen name="padding_5">5dp</dimen>
+
+
+    <!-- LoadingView-->
+    <dimen name="loading_view_shadow_width">25dp</dimen>
+    <dimen name="loading_view_shadow_high">3dp</dimen>
+    <dimen name="loading_view_shadow_margintop">82dp</dimen>
+    <dimen name="loading_view_text_size">15sp</dimen>
+    <dimen name="loading_view_text_margintop">18dp</dimen>
+    <dimen name="loading_view_shape_view_size">27dp</dimen>
+
+    <!-- LoadMoreFooter-->
+    <dimen name="loadmore_footer_text_size">14sp</dimen>
+    <dimen name="loadmore_footer_high">55dp</dimen>
+
+    <dimen name="org_home_icon_size">40dp</dimen>
+    <dimen name="org_home_icon_margin_top">24dp</dimen>
+    <dimen name="org_home_icon_text_margin_bottom">14dp</dimen>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_guide"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:visibility="gone"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/icon_guide_image_two" />
+
+    <ImageView
+        android:id="@+id/ivImageTwo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/icon_guide_image_two" />
+
+    <ImageView
+        android:id="@+id/ivText"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/icon_guide_text_two" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1.0" />
+
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/guide_button_click_style"
+        android:gravity="center"
+        android:text="立即体验"
+        android:textColor="@drawable/guide_button_text_color_style"
+        android:textSize="17sp" />
+
+</LinearLayout>

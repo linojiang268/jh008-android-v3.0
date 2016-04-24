@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="#3F434E" />
+
+    <TextView
+        android:id="@+id/tvMember"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@drawable/theme_to_titlebar_click_style"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size_sixteen"
+        android:text="成员"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="#3F434E" />
+
+    <TextView
+        android:id="@+id/tvPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@drawable/theme_to_titlebar_click_style"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size_sixteen"
+        android:text="相册"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="近期活动"
+        android:singleLine="true"
+        android:background="@drawable/transparent_to_theme_color_bg"
+        android:textColor="@drawable/black_light_to_white_text_color"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

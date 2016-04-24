@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_nor_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_base" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:id="@+id/llHighView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2.0px"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/tvActTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="2015年6月23日"
+                    android:textColor="@color/line_color"
+                    android:textSize="@dimen/text_l" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2.0px"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvActName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="各种社团活动的名称"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/text_xl" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2.0px"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="活动相关"
+                    android:textColor="@color/line_color"
+                    android:textSize="@dimen/text_l" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2.0px"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp">
+
+                <TextView
+                    android:id="@+id/tvActDetail"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_circle_green_click_style"
+                    android:gravity="center"
+                    android:text="活动\n详情"
+                    android:textColor="@drawable/green_to_white_text_color"
+                    android:textSize="@dimen/text_l" />
+
+                <TextView
+                    android:id="@+id/tvActOrg"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_circle_green_click_style"
+                    android:gravity="center"
+                    android:text="主办方"
+                    android:textColor="@drawable/green_to_white_text_color"
+                    android:textSize="@dimen/text_l" />
+
+                <TextView
+                    android:id="@+id/tvActPhoto"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_circle_green_click_style"
+                    android:gravity="center"
+                    android:text="相册"
+                    android:textColor="@drawable/green_to_white_text_color"
+                    android:textSize="@dimen/text_l" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLowView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.gather.android.widget.NoScrollGridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:headerDividersEnabled="false"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:listSelector="#00000000"
+                android:numColumns="2"
+                android:padding="16dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollingCache="true" />
+
+            <EditText
+                android:id="@+id/tvEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/white_edittext_bg"
+                android:gravity="top|left"
+                android:hint="输入你想说的话"
+                android:lineSpacingExtra="2dp"
+                android:maxHeight="200dp"
+                android:minHeight="150dp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_l" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.gather.android.widget.RatingBarView
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:starCount="5"
+        app:starEmpty="@drawable/icon_rating_unselected"
+        app:starFill="@drawable/icon_rating_selected"
+        app:starImageSize="52dp" />
+
+    <Button
+        android:id="@+id/btnCommit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/green_corner_btn_click_style"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_l" />
+
+
+</LinearLayout>

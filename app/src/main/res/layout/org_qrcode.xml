@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/app_nor_bg"
+    android:orientation="vertical">
+
+    <com.gather.android.widget.TitleBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/style_color_primary"
+        android:elevation="@dimen/def_elevation"
+        app:theme="@style/Toolbar.AppCompat.Responsive" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivQRCode"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        fresco:actualImageScaleType="fitXY"
+        fresco:fadeDuration="300"
+        fresco:placeholderImage="@drawable/default_image"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:pressedStateOverlayImage="@color/image_click_color" />
+
+</LinearLayout>
